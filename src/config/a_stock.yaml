@@ -1,0 +1,15 @@
+exp_name: "a_stock"
+cashflow: 100000
+tickers:
+  - "600519"
+  - "000001"
+workflow_analysts:
+  - fundamental
+  - macroeconomic
+  - technical
+  - company_news
+  - insider
+  - policy
+llm:
+  provider: "DeepSeek"
+  model: "deepseek-chat"

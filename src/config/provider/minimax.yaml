@@ -1,0 +1,25 @@
+# Deep Fund Configuration
+exp_name: "minimax-test"
+
+# Trading settings
+cashflow: 100000
+tickers:
+  - "600519"
+  - "600036"
+  - "601318"
+  - "300750"
+  - "600028"
+workflow_analysts:
+  - fundamental
+  - macroeconomic
+  - technical
+  - company_news
+  - insider
+  - policy
+
+# LLM model settings, refer to llm/inference.py: LLMConfig
+llm:
+  provider: "MiniMax"
+  model: "MiniMax-M3"
+  temperature: 1.0
+  max_tokens: 6000   # M3 的 <think> 也计入额度；4000 时曾因 reasoning 3700+ 触发 finish_reason=length
